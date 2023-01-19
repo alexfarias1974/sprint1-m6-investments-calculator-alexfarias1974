@@ -1,0 +1,237 @@
+html {
+    background-color: #F2F2F2;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 608px;
+    height: 389px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    border-style: outset;
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px #888888;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* Form Style */
+.simulator {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #656565;
+}
+
+.formSimulator {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label {
+    font-size: 14px;
+    line-height: 16px;
+    color: #656565;
+}
+
+.input {
+    width: 251px;
+    height: 37px;
+    border-radius: 4px;
+    border: 1px solid #DDE6E9;
+    box-shadow: 5px 6px 8px #888888;
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+p {
+    font-size: 11px;
+    line-height: 13px;
+    color: #CECECE;
+    margin-top: -20px;
+    margin-bottom: 26px;
+}
+
+/* Button style */
+.divButton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 1em;
+    background: #1c03f7;
+    color: #fff;
+    box-shadow: 5px 6px 8px #888888;
+    border-radius: 5px;
+    border: 0.25rem solid #1c03f7;
+    padding: 0.55em 0.75em;
+    margin: -0.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover {
+    color: #1c03f7;
+}
+
+button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+}
+
+button[class^="grow"]::after {
+    transition: all 0.5s ease;
+}
+
+button[class^="grow"]:hover::after {
+    transition: all 0.5s ease-out;
+}
+
+button.grow_spin::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+}
+
+button.grow_spin:hover::after {
+    transform: scale(1, 1) rotate(0deg);
+}
+
+/* Response style */
+.resultSimulator {
+    background: #1c03f7;
+    display: flex;
+    flex-direction: column;
+    width: 231px;
+    height: 389px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.titleData {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-top: 65px;
+    border-bottom: 3px solid #ffffff;
+}
+
+.dataSimulator {
+    display: flex;
+    margin-left: -15px;
+}
+
+.ulDaysAntecipation {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 46px;
+    margin-left: 0px;
+    color: #ffffff;
+}
+
+.ulValuesAntecipation {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 46px;
+    color: #ffffff;
+}
+
+/* Loading Style */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(165, 162, 162); */
+    overflow: hidden;
+}
+
+.loader {
+    width: 10em;
+    height: 10em;
+    font-size: 25px;
+    box-sizing: border-box;
+    border-top: 0.3em solid hotpink;
+    border-radius: 50%;
+    position: relative;
+    animation: rotating 2s ease-in-out infinite;
+    --direction: 1;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: -0.2em;
+}
+
+.loader::before {
+    border-top: 0.3em solid dodgerblue;
+    transform: rotate(120deg);
+}
+
+.loader::after {
+    border-top: 0.3em solid gold;
+    transform: rotate(240deg);
+}
+
+.loader span {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 10em;
+    font-family: sans-serif;
+    animation: rotating 2s linear infinite;
+    --direction: -1;
+}
+
+@keyframes rotating {
+    50% {
+        transform: rotate(calc(180deg * var(--direction)));
+    }
+
+    100% {
+        transform: rotate(calc(360deg * var(--direction)));
+    }
+}
+
+/* Error style */
+.error {
+    padding: 15px 20px;
+    border: 2px solid red;
+    color: red;
+}
