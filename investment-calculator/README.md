@@ -39,7 +39,8 @@ Você também pode ver erros de lint no console.
 
 ## Deploy
 
-O deploy da aplicação foi feito com o Vercel.
+O deploy da aplicação foi feito com o Vercel.\
+https://sprint1-m6-investments-calculator-alexfarias1974-m2g2.vercel.app/
 
 ## Stacks utilizadas
 
@@ -56,5 +57,5 @@ O deploy da aplicação foi feito com o Vercel.
 
 ## Autor
 
-Alexandre Farias
+Alexandre Farias\
 www.linkedin.com/in/alexandre-farias-06b78362
